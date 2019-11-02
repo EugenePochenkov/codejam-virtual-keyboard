@@ -1,0 +1,27 @@
+html,
+body {
+  @include centering(column);
+
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  max-width: $screen-desktop;
+  margin: 0 auto;
+  
+  background-color: $bg-color--light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  
+  cursor: pointer;
+}
+
+

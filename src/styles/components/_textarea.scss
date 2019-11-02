@@ -1,0 +1,19 @@
+.textarea {
+  display: block;
+  width: 70vw;
+  height: 30vh;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  font-family: 'Roboto', 'Tahoma', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+
+  &:focus {
+    border-width: 5px;
+    border-color: $bg-color--keys-permanent;
+
+    outline: none;
+  }
+}
