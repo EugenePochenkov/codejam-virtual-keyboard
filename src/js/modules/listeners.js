@@ -11,6 +11,25 @@ body.addEventListener('keydown', (event) => {
   if (key.classList.contains('keybord__arrow')) {
     textarea.value += key.textContent;
   }
+
+  if (key.classList.contains('Tab')) {
+    event.preventDefault();
+    textarea.selectionStart += 2;
+  }
+
+  if (key.classList.contains('CapsLock')) {
+    const caps = document.querySelectorAll('.capslockable');
+    caps.forEach((element) => {
+      element.classList.toggle('show');
+    });
+  }
+
+  if (key.classList.contains('keybord__shift')) {
+    const shift = document.querySelectorAll('.shiftable');
+    shift.forEach((element) => {
+      element.classList.toggle('show');
+    });
+  }
 });
 
 body.addEventListener('keyup', (event) => {
@@ -18,6 +37,31 @@ body.addEventListener('keyup', (event) => {
   const key = document.querySelector(`.${code}`);
 
   key.classList.remove('active');
+
+  if (key.classList.contains('keybord__shift')) {
+    const shift = document.querySelectorAll('.shiftable');
+    shift.forEach((element) => {
+      element.classList.toggle('show');
+    });
+  }
+});
+
+body.addEventListener('click', (event) => {
+  const { target } = event;
+
+  if (target.classList.contains('CapsLock')) {
+    const caps = document.querySelectorAll('.capslockable');
+    caps.forEach((element) => {
+      element.classList.toggle('show');
+    });
+  }
+
+  if (target.classList.contains('keybord__shift')) {
+    const shift = document.querySelectorAll('.shiftable');
+    shift.forEach((element) => {
+      element.classList.toggle('show');
+    });
+  }
 });
 
 body.addEventListener('mousedown', (event) => {
