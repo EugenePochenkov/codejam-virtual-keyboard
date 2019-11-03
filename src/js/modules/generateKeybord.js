@@ -23,10 +23,12 @@ keysData.forEach((row) => {
       keybordKey.append(keybordKeyTextEng);
 
       const keybordKeyTextEngSymbolSmall = createElement('span', 'small');
+      keybordKeyTextEngSymbolSmall.classList.add('text');
       keybordKeyTextEngSymbolSmall.innerHTML = key.eng.small;
       keybordKeyTextEng.append(keybordKeyTextEngSymbolSmall);
 
       const keybordKeyTextEngSymbolBig = createElement('span', 'big');
+      keybordKeyTextEngSymbolBig.classList.add('text');
       keybordKeyTextEngSymbolBig.innerHTML = key.eng.big;
       keybordKeyTextEng.append(keybordKeyTextEngSymbolBig);
 
@@ -35,10 +37,12 @@ keysData.forEach((row) => {
       keybordKey.append(keybordKeyTextRus);
 
       const keybordKeyTextRusSymbolSmall = createElement('span', 'small');
+      keybordKeyTextRusSymbolSmall.classList.add('text');
       keybordKeyTextRusSymbolSmall.innerHTML = key.rus.small;
       keybordKeyTextRus.append(keybordKeyTextRusSymbolSmall);
 
       const keybordKeyTextRusSymbolBig = createElement('span', 'big');
+      keybordKeyTextRusSymbolBig.classList.add('text');
       keybordKeyTextRusSymbolBig.innerHTML = key.rus.big;
       keybordKeyTextRus.append(keybordKeyTextRusSymbolBig);
     }
@@ -49,18 +53,4 @@ keysData.forEach((row) => {
   });
 });
 
-body.addEventListener('keydown', (event) => {
-  textarea.focus();
-
-  const { code } = event;
-  const key = document.querySelector(`.${code}`);
-
-  key.classList.toggle('active');
-});
-
-body.addEventListener('keyup', (event) => {
-  const { code } = event;
-  const key = document.querySelector(`.${code}`);
-
-  key.classList.remove('active');
-});
+export { body, textarea };

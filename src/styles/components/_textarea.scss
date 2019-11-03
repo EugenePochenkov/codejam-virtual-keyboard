@@ -11,9 +11,6 @@
   line-height: 1.2;
 
   &:focus {
-    border-width: 5px;
-    border-color: $bg-color--keys-permanent;
-
     outline: none;
   }
 }

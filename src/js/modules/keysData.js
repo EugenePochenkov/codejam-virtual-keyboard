@@ -124,11 +124,11 @@ const data = [
       eventCode: 'Digit0',
       CapsLockable: false,
       eng: {
-        small: '9',
+        small: '0',
         big: ')',
       },
       rus: {
-        small: '9',
+        small: '0',
         big: ')',
       },
     },
@@ -462,7 +462,7 @@ const data = [
       eventCode: 'Backslash',
       CapsLockable: true,
       eng: {
-        small: '&#8260;',
+        small: '&#92;',
         big: '|',
       },
       rus: {
@@ -622,7 +622,7 @@ const data = [
       eventCode: 'ArrowUp',
       CapsLockable: false,
       default: '▲',
-      className: 'keybord__arrow--up',
+      className: 'keybord__arrow',
       permanent: true,
     },
     {

@@ -33,17 +33,12 @@
   border-radius: 5px;
   box-shadow: 0 0 10px 5px $bg-color--light;
 
-  &:hover {
-    background-color: darken($bg-color--keys-changing, 20%);
-  }
+  user-select: none;
+  cursor: pointer;
 }
 
 .keybord__permanent {
   background-color: $bg-color--keys-permanent;
-
-  &:hover {
-    background-color: darken($bg-color--keys-permanent, 10%);
-  }
 }
 
 .keybord__backspace {
@@ -67,7 +62,7 @@
 }
 
 .keybord__ctrl {
-  width: 60px;
+  width: 55px;
 }
 
 .keybord__alt {
@@ -83,5 +78,5 @@
 }
 
 .keybord__arrow {
-  width: 65px;
+  width: 70px;
 }
