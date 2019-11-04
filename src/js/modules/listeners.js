@@ -6,6 +6,13 @@ body.addEventListener('keydown', (event) => {
   const { code } = event;
   const key = document.querySelector(`.${code}`);
 
+  if (document.querySelector(`.${code}.show-lang`)) {
+    event.preventDefault();
+    const targetKey = document.querySelector(`.${code}.show-lang`);
+    const targetKeySymbol = targetKey.querySelector('.show');
+    textarea.value += targetKeySymbol.textContent;
+  }
+
   key.classList.add('active');
 
   if (key.classList.contains('keybord__arrow')) {
