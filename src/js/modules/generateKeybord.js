@@ -19,7 +19,7 @@ keysData.forEach((row) => {
 
     if (key.eng && key.rus) {
       const keybordKeyTextEng = createElement('span', key.eventCode);
-      keybordKeyTextEng.classList.add('show');
+      keybordKeyTextEng.classList.add('lang');
       keybordKey.append(keybordKeyTextEng);
 
       const keybordKeyTextEngSymbolSmall = createElement('span', 'small');
@@ -38,7 +38,7 @@ keysData.forEach((row) => {
       keybordKeyTextEng.append(keybordKeyTextEngSymbolBig);
 
       const keybordKeyTextRus = createElement('span', key.eventCode);
-      keybordKeyTextRus.classList.add('hide');
+      keybordKeyTextRus.classList.add('lang');
       keybordKey.append(keybordKeyTextRus);
 
       const keybordKeyTextRusSymbolSmall = createElement('span', 'small');
@@ -55,6 +55,12 @@ keysData.forEach((row) => {
       if (key.eng.shiftable) keybordKeyTextRusSymbolBig.classList.add('shiftable');
       keybordKeyTextRusSymbolBig.innerHTML = key.rus.big;
       keybordKeyTextRus.append(keybordKeyTextRusSymbolBig);
+
+      if (!localStorage.getItem('lang') || localStorage.getItem('lang') === 'eng') {
+        keybordKeyTextEng.classList.add('show-lang');
+      } else {
+        keybordKeyTextRus.classList.add('show-lang');
+      }
     }
 
     if (key.default) keybordKey.innerHTML = key.default;

@@ -1,4 +1,4 @@
-const data = [
+const keysData = [
   [
     {
       eventCode: 'Backquote',
@@ -879,6 +879,7 @@ const data = [
         shiftable: false,
         CapsLockable: false,
       },
+      default: 'Space',
       className: 'keybord__space',
       permanent: true,
     },
@@ -955,4 +956,4 @@ const data = [
   ],
 ];
 
-export default data;
+export default keysData;

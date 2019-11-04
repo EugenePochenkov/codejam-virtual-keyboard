@@ -14,7 +14,7 @@ body.addEventListener('keydown', (event) => {
 
   if (key.classList.contains('Tab')) {
     event.preventDefault();
-    textarea.selectionStart += 2;
+    textarea.value += '\t';
   }
 
   if (key.classList.contains('CapsLock')) {
@@ -28,6 +28,19 @@ body.addEventListener('keydown', (event) => {
     const shift = document.querySelectorAll('.shiftable');
     shift.forEach((element) => {
       element.classList.toggle('show');
+    });
+  }
+
+  if (event.altKey && event.ctrlKey) {
+    if (!localStorage.getItem('lang') || localStorage.getItem('lang') === 'eng') {
+      localStorage.setItem('lang', 'rus');
+    } else {
+      localStorage.setItem('lang', 'eng');
+    }
+
+    const keys = document.querySelectorAll('.lang');
+    keys.forEach((element) => {
+      element.classList.toggle('show-lang');
     });
   }
 });
@@ -61,6 +74,15 @@ body.addEventListener('click', (event) => {
     shift.forEach((element) => {
       element.classList.toggle('show');
     });
+  }
+
+  if (target.classList.contains('Tab')) {
+    event.preventDefault();
+    textarea.value += '\t';
+  }
+
+  if (target.classList.contains('Space')) {
+    textarea.value += ' ';
   }
 });
 
