@@ -1,0 +1,82 @@
+.keybord {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  height: 50vh;
+  margin: 0 auto;
+  padding: 20px;
+
+  font-family: 'Roboto', 'Tahoma', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $text-color--keys-permanent;
+
+  background-color: $bg-color--keybord;
+  border-radius: 20px;
+}
+
+.keybord__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.keybord__key {
+  @include centering();
+
+  width: 55px;
+  height: 55px;
+
+  background-color: $bg-color--keys-changing;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px $bg-color--light;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.keybord__permanent {
+  background-color: $bg-color--keys-permanent;
+}
+
+.keybord__backspace {
+  width: 110px;
+}
+
+.keybord__tab {
+  width: 110px;
+}
+
+.keybord__shift {
+  width: 80px;
+}
+
+.keybord__enter {
+  width: 80px;
+}
+
+.keybord__caps {
+  width: 130px;
+}
+
+.keybord__ctrl {
+  width: 55px;
+}
+
+.keybord__alt {
+  width: 60px;
+}
+
+.keybord__cmd {
+  width: 70px;
+}
+
+.keybord__space {
+  width: 300px;
+}
+
+.keybord__arrow {
+  width: 70px;
+}

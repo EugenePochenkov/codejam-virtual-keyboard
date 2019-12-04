@@ -1,0 +1,7 @@
+.text {
+  @include centering();
+
+  width: 55px;
+  height: 55px;
+  user-select: none;
+}

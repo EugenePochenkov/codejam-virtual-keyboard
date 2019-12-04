@@ -1,0 +1,14 @@
+@keyframes animateKey {
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate {
+  animation-name: animateKey;
+  animation-duration: 0.5s;
+}
